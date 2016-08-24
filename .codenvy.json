@@ -15,7 +15,7 @@
             },
             "source": {
               "type": "dockerfile",
-              "location": "https://raw.githubusercontent.com/jloramas/bitnami-docker-java-play/che/.codenvy.dockerfile"
+              "location": "https://raw.githubusercontent.com/bitnami/bitnami-docker-java-play/che/.codenvy.dockerfile"
             },
             "type": "docker",
             "dev": true
@@ -30,7 +30,7 @@
         "path": "/play-sample",
         "source": {
           "type": "git",
-          "location": "https://github.com/jloramas/bitnami-docker-java-play",
+          "location": "https://github.com/bitnami/bitnami-docker-java-play",
           "parameters": {
             "branch": "che",
             "keepVcs": "true"
