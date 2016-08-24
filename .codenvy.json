@@ -60,7 +60,7 @@
       {
         "name": "build sample project",
         "type": "custom",
-        "commandLine": "cd ${current.project.path} && activator new app_template play-java",
+        "commandLine": "mkdir -p ${current.project.path} && cd ${current.project.path} && activator new app_template play-java",
         "attributes": {}
       }
     ]
