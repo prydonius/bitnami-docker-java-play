@@ -129,7 +129,7 @@ $ docker-compose run myapp bash
 Now were in! To create a new Play Scala project
 
 ```bash
-$ activator new bitnamiRocks play-scala
+$ activator new bitnamiRocks play-java
 ```
 
 You get the idea..
