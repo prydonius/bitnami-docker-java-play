@@ -14,8 +14,8 @@
               "ram": 1024
             },
             "source": {
-              "type": "dockerfile",
-              "location": "https://raw.githubusercontent.com/bitnami/bitnami-docker-java-play/che/.codenvy.dockerfile"
+              "type": "image",
+              "location": "bitnami/java-play:che-2.5.6-r0"
             },
             "type": "docker",
             "dev": true
@@ -30,7 +30,7 @@
         "path": "/play-sample",
         "source": {
           "type": "git",
-          "location": "https://github.com/bitnami/bitnami-docker-java-play",
+          "location": "https://github.com/bitnami/bitnami-docker-java-play.git",
           "parameters": {
             "branch": "che",
             "keepVcs": "true"
