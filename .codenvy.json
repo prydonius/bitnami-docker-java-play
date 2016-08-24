@@ -1,0 +1,80 @@
+{
+  "v": "4.0",
+  "workspace": {
+    "name": "play",
+    "defaultEnv": "play",
+    "environments": [
+      {
+        "name": "play",
+        "recipe": null,
+        "machineConfigs": [
+          {
+            "name": "ws-machine",
+            "limits": {
+              "ram": 1024
+            },
+            "source": {
+              "type": "dockerfile",
+              "location": "https://raw.githubusercontent.com/jloramas/bitnami-docker-java-play/che/.codenvy.dockerfile"
+            },
+            "type": "docker",
+            "dev": true
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "play-sample",
+        "type": "java",
+        "path": "/play-sample",
+        "source": {
+          "type": "git",
+          "location": "https://github.com/jloramas/bitnami-docker-java-play",
+          "parameters": {
+            "branch": "che",
+            "keepVcs": "true"
+          }
+        },
+        "mixins": [
+          "git",
+          "pullrequest"
+        ],
+        "attributes": {
+          "local_branch": [ "contrib" ],
+          "contribute_to_branch" : [ "master" ]
+        },
+        "modules": [],
+        "problems": []
+      }
+    ],
+    "commands": [
+      {
+        "name": "build and start",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path}/app_template && activator run -Dhttp.port=9000 -Dhttp.host=0.0.0.0",
+        "attributes": {
+           "previewUrl": "http://${server.port.9000}/"
+        }
+      },
+      {
+        "name": "build sample project",
+        "type": "custom",
+        "commandLine": "cd ${current.project.path} && activator new app_template play-java",
+        "attributes": {}
+      }
+    ]
+  },
+  "ide": {
+    "onProjectsLoaded": {
+      "actions": [
+        {
+          "properties": {
+            "name": "build sample project"
+          },
+          "id": "runCommand"
+        }
+      ]
+    }
+  }
+}
