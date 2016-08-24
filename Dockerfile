@@ -15,7 +15,7 @@ RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:openjdk-r/ppa && \
     apt-get update && apt-get -y install openjdk-8-jdk && \
-    clean RUN
+    apt-get clean
 
 # Install activator
 
