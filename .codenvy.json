@@ -50,7 +50,7 @@
     ],
     "commands": [
       {
-        "name": "build and start",
+        "name": "run first",
         "type": "custom",
         "commandLine": "cd ${current.project.path}/app_template && activator run -Dhttp.port=9000 -Dhttp.host=0.0.0.0",
         "attributes": {
@@ -58,9 +58,9 @@
         }
       },
       {
-        "name": "build sample project",
+        "name": "create project",
         "type": "custom",
-        "commandLine": "mkdir -p ${current.project.path} && cd ${current.project.path} && activator new app_template play-java",
+        "commandLine": "if [ -d ${current.project.path} ] ; then cd ${current.project.path} ; fi && activator new app_template play-java",
         "attributes": {}
       }
     ]
