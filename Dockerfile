@@ -23,6 +23,8 @@ RUN bitnami-pkg install activator-1.3.10-0 --checksum cb7da7398f22782c308fcfa095
 
 ENV PATH=/opt/bitnami/activator/bin:$PATH
 
+ENV BITNAMI_APP_NAME=java-play
+
 COPY rootfs/ /
 
 USER bitnami
