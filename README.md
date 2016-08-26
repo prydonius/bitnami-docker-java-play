@@ -48,10 +48,6 @@ We also assume that you have some beginner-level experience using these tools.
 >
 > If your host OS is Linux you may skip setting up Docker Machine since you'll be able to launch the containers directly in the host OS environment.
 
-Further, we also assume that your application will be using a database. In fact, we assume that it will be using MongoDB. Of course, for a real project you may be using a different database, or, in fact, no database. But, this is a common set up and will help you learn the development approach.
-
-## Download the Bitnami Orchestration File for Java / Play framework development
-
 We assume that you're starting the development of the [Java / Play framework](https://playframework.com/) application from scratch. So lets begin by creating a directory for the application source where we'll be bootstrapping a Play based application:
 
 ```bash

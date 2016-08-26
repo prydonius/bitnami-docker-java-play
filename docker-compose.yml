@@ -3,7 +3,7 @@ version: '2'
 services:
   myapp:
     stdin_open: true
-    build: .
+    image: bitnami/java-play:latest
     ports:
       - '8888:8888'
       - '9000:9000'
