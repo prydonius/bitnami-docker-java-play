@@ -1,3 +1,4 @@
+[![Docker Hub Automated Build](http://container.checkforupdates.com/badges/bitnami/java-play)](https://hub.docker.com/r/bitnami/java-play/)
 # Java / Play framework Application Development using Bitnami Docker Images
 
 We increasingly see developers adopting two strategies for development. Using a so called 'micro services' architecture and using containers for development. At Bitnami, we have developed tools and assets that dramatically lowers the overhead for developing with this approach.
