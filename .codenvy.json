@@ -26,7 +26,7 @@
     "projects": [
       {
         "name": "play-sample",
-        "type": "java",
+        "type": "javac",
         "path": "/play-sample",
         "source": {
           "type": "git",
