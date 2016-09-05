@@ -1,22 +1,11 @@
 #!/bin/bash
 set -e
 
-#set app name to ENV or default
-PLAY_PROJECT_NAME="test"
-PLAY_TEMPLATE="play-java"
-PLAY_PROJECT_PORT="9000"
-
-if [ "$APP_NAME" != "" ] ; then
-    PLAY_PROJECT_NAME=$APP_NAME
-fi
-
-if [ "$ACTIVATOR_TEMPLATE" != "" ] ; then
-    PLAY_PROJECT_TEMPLATE=$ACTIVATOR_TEMPLATE
-fi
-
-if [ "$APP_PORT" != "" ] ; then
-    PLAY_PROJECT_PORT=$APP_PORT
-fi
+# Set default values
+export PLAY_PROJECT_NAME=${PLAY_PROJECT_NAME:-"test"}
+export PLAY_TEMPLATE=${PLAY_TEMPLATE:-"play-java"}
+export PLAY_PROJECT_PORT=${PLAY_PROJECT_PORT:-"9000"}
+export SYMFONY_PROJECT_NAME=${SYMFONY_PROJECT_NAME:-"app_template"}
 
 PROJECT_DIRECTORY=/app/$PLAY_PROJECT_NAME
 
