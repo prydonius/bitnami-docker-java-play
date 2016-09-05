@@ -18,7 +18,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Java/Play (Activator) module
-RUN bitnami-pkg install activator-1.3.10-0 --checksum cb7da7398f22782c308fcfa0959c3b8b23eb7138247e343bd207ae06601fdd1b
+RUN bitnami-pkg install activator-1.3.10-0 --checksum a3bcd1f9e81294f64a12c9e7c41bfe5730f973c26953ce8b0ec60d0411a16e9d
 
 EXPOSE 9000
 
