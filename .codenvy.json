@@ -52,7 +52,7 @@
       {
         "name": "run first",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && cd ${current.project.path}/app_template && activator run -Dhttp.port=9000 -Dhttp.host=0.0.0.0",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && cd /projects && rm  && activator run -Dhttp.port=9000 -Dhttp.host=0.0.0.0 -Doffline=true",
         "attributes": {
            "previewUrl": "http://${server.port.9000}/"
         }
@@ -60,7 +60,7 @@
       {
         "name": "create project",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && if [ -d ${current.project.path} ] ; then cd ${current.project.path} ; fi && activator new app_template play-java",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && if [ -d ${current.project.path} ] ; then cd ${current.project.path} ; fi && activator new app_template play-java -Doffline=true",
         "attributes": {}
       }
     ]
