@@ -70,7 +70,7 @@
       "actions": [
         {
           "properties": {
-            "name": "create project"
+            "name": "create project - run first"
           },
           "id": "runCommand"
         }
