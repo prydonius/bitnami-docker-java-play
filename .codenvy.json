@@ -15,7 +15,7 @@
             },
             "source": {
               "type": "image",
-              "location": "bitnami/java-play:che"
+              "location": "bitnami/che-java-play:development"
             },
             "type": "docker",
             "dev": true
