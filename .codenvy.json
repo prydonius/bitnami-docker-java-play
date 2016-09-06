@@ -30,10 +30,10 @@
         "path": "/play-sample",
         "source": {
           "type": "git",
-          "location": "https://github.com/bitnami/bitnami-docker-java-play.git",
+          "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample",
           "parameters": {
             "branch": "che",
-            "keepVcs": "true"
+            "keepVcs": "false"
           }
         },
         "mixins": [
@@ -50,17 +50,17 @@
     ],
     "commands": [
       {
-        "name": "run first",
+        "name": "run",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && cd /projects && rm  && activator run -Dhttp.port=9000 -Dhttp.host=0.0.0.0 -Doffline=true",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && cd ${current.project.path} && /opt/bitnami/activator/bin/activator -Doffline=true -Dhttp.host=0.0.0.0 -Dhttp.port=9000 ~run",
         "attributes": {
            "previewUrl": "http://${server.port.9000}/"
         }
       },
       {
-        "name": "create project",
+        "name": "create project - run first",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && if [ -d ${current.project.path} ] ; then cd ${current.project.path} ; fi && activator new app_template play-java -Doffline=true",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && nami execute activator createProject --force --template play-java play-sample && cd ${current.project.path} && /opt/bitnami/activator/bin/activator -Doffline=true -Dhttp.host=0.0.0.0 -Dhttp.port=9000 ~run",
         "attributes": {}
       }
     ]
