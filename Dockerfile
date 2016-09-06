@@ -30,8 +30,6 @@ RUN bitnami-pkg install activator-1.3.10-1 --checksum 3bd4f55c852ac71e9f712a1537
 
 COPY rootfs/ /
 
-USER bitnami
-
 WORKDIR /app
 
 EXPOSE 9000
