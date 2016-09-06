@@ -13,16 +13,13 @@ log () {
     echo -e "\033[0;33m$(date "+%H:%M:%S")\033[0;37m ==> $1."
 }
 
-if [ "$1" == "activator" -a "$2" == "~run" ] ; then
+if [ "$1" == "activator" -a "$5" == "~run" ] ; then
     if [ ! -d $PROJECT_DIRECTORY ] ; then
       log "Creating example Play application"
-      cd /app
-      activator new $PLAY_PROJECT_NAME $PLAY_TEMPLATE
+      nami execute activator createProject --force $PLAY_PROJECT_NAME $PLAY_TEMPLATE
       log "Play app created"
-      cd $PLAY_PROJECT_NAME
     else 
 	  log "App already created"
-      cd $PROJECT_DIRECTORY
     fi
 fi
 
