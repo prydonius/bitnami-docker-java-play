@@ -11,7 +11,7 @@ FROM gcr.io/stacksmith-images/ubuntu-buildpack:14.04-r9
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV BITNAMI_APP_NAME=java-play \
-    BITNAMI_APP_VERSION=1.3.10-0 \
+    BITNAMI_APP_VERSION=1.3.10-1 \
     PATH=/opt/bitnami/activator/bin:/opt/bitnami/node/bin:$PATH \
     TERM=xterm
 
@@ -26,7 +26,7 @@ RUN apt-get update && \
 RUN bitnami-pkg install node-6.4.0-0 --checksum 41d5a7b17ac1f175c02faef28d44eae0d158890d4fa9893ab24b5cc5f551486f
 
 # Install Java/Play (Activator) module
-RUN bitnami-pkg install activator-1.3.10-0 --checksum 0e517c719ffcaaeaf234df845b69cfe561f722c5344a1821706bd269900ba9f4
+RUN bitnami-pkg install activator-1.3.10-1 --checksum 3bd4f55c852ac71e9f712a153794fa60e2bb6fce25d35eb67a8de05e5cd8d66b
 
 COPY rootfs/ /
 
