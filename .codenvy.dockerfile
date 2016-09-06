@@ -21,7 +21,7 @@ RUN apt-get update && \
 RUN bitnami-pkg install node-6.4.0-0 --checksum 41d5a7b17ac1f175c02faef28d44eae0d158890d4fa9893ab24b5cc5f551486f
 
 # Install Java/Play (Activator) module
-RUN bitnami-pkg install activator-1.3.10-1 --checksum 3bd4f55c852ac71e9f712a153794fa60e2bb6fce25d35eb67a8de05e5cd8d66b --applicationDirectory /projects
+RUN bitnami-pkg install activator-1.3.10-1 --checksum 3bd4f55c852ac71e9f712a153794fa60e2bb6fce25d35eb67a8de05e5cd8d66b -- --applicationDirectory /projects
 
 EXPOSE 9000
 
