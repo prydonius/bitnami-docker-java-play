@@ -25,11 +25,10 @@ RUN bitnami-pkg install activator-1.3.10-3 --checksum c53b4981e56365c8ff247d2ebb
 
 EXPOSE 9000
 
-WORKDIR /projects
-
 # Interact with Eclipse che
 LABEL che:server:9000:ref=play che:server:9000:protocol=http
 
 USER bitnami
+WORKDIR /projects
 
 CMD ["tail", "-f", "/dev/null"]
