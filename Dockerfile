@@ -11,7 +11,7 @@ FROM gcr.io/stacksmith-images/ubuntu-buildpack:14.04-r9
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV BITNAMI_APP_NAME=java-play \
-    BITNAMI_APP_VERSION=1.3.10-1 \
+    BITNAMI_APP_VERSION=1.3.10-2 \
     PATH=/opt/bitnami/activator/bin:/opt/bitnami/node/bin:$PATH \
     TERM=xterm
 
