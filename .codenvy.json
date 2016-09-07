@@ -15,7 +15,7 @@
             },
             "source": {
               "type": "image",
-              "location": "bitnami/che-java-play:development"
+              "location": "bitnami/che-java-play:che-2.55-r3"
             },
             "type": "docker",
             "dev": true
@@ -32,12 +32,10 @@
           "type": "git",
           "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample",
           "parameters": {
-            "branch": "master",
             "keepVcs": "false"
           }
         },
         "mixins": [
-          "git",
           "pullrequest"
         ],
         "attributes": {
@@ -50,7 +48,7 @@
     ],
     "commands": [
       {
-        "name": "run",
+        "name": "2. Run",
         "type": "custom",
         "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && cd ${current.project.path} && /opt/bitnami/activator/bin/activator -Doffline=true -Dhttp.host=0.0.0.0 -Dhttp.port=9000 -Dsbt.log.noformat=true ~run",
         "attributes": {
@@ -58,7 +56,7 @@
         }
       },
       {
-        "name": "create project - run first",
+        "name": "1. Create project",
         "type": "custom",
         "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && sudo HOME=/root /opt/bitnami/nami/bin/nami execute activator createProject --force play-sample play-java | grep -v undefined && cd ${current.project.path} && /opt/bitnami/activator/bin/activator -Dsbt.log.noformat=true -Doffline=true -Dhttp.host=0.0.0.0 -Dhttp.port=9000 ~run",
         "attributes": {
@@ -72,7 +70,7 @@
       "actions": [
         {
           "properties": {
-            "name": "create project - run first"
+            "name": "1. Create project"
           },
           "id": "runCommand"
         }
