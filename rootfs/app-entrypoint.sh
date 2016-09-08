@@ -23,4 +23,6 @@ if [ "$1" == "activator" -a "$5" == "~run" ] ; then
     fi
 fi
 
+cd $PROJECT_DIRECTORY
+
 exec /entrypoint.sh "$@"
