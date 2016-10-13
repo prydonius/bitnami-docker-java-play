@@ -9,13 +9,14 @@ ENV BITNAMI_APP_NAME=java-play \
 
 # Install extra packages
 RUN apt-get update && \
-    apt-get install -y software-properties-common && \
+    apt-get install -y --no-install-recommends software-properties-common && \
     add-apt-repository ppa:openjdk-r/ppa && \
-    apt-get update && apt-get -y install openjdk-8-jdk && \
+    apt-get update && \
+    apt-get -y install --no-install-recommends openjdk-8-jdk && \
     echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
     apt-get clean && \
     apt-get -y autoremove && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt /var/cache/apt/archives/* /tmp/*
 
 # Install Play dependencies
 RUN bitnami-pkg install node-6.4.0-0 --checksum 41d5a7b17ac1f175c02faef28d44eae0d158890d4fa9893ab24b5cc5f551486f
