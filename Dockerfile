@@ -17,10 +17,12 @@ ENV BITNAMI_APP_NAME=java-play \
 
 # Install related packages
 RUN apt-get update && \
-    apt-get install -y software-properties-common && \
+    apt-get install -y --no-install-recommends software-properties-common && \
     add-apt-repository ppa:openjdk-r/ppa && \
-    apt-get update && apt-get -y install openjdk-8-jdk && \
-    apt-get clean
+    apt-get update && \
+    apt-get install -y --no-install-recommends openjdk-8-jdk && \
+    apt-get clean && \
+    rm -rf /var/lib/apt /var/cache/apt/archives/* /tmp/*
 
 # Install Play dependencies
 RUN bitnami-pkg install node-6.6.0-1 --checksum 36f42bb71b35f95db3bb21d088fbd9438132fb2a7fb4d73b5951732db9a6771e
