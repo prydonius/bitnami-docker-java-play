@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/bitnami/bitnami-docker-java-play/tree/master.svg?style=shield)](https://circleci.com/gh/bitnami/bitnami-docker-java-play/tree/master)
 [![Docker Hub Automated Build](http://container.checkforupdates.com/badges/bitnami/java-play)](https://hub.docker.com/r/bitnami/java-play/)
 # Java / Play framework Application Development using Bitnami Docker Images
 
