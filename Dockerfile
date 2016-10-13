@@ -16,9 +16,11 @@ ENV BITNAMI_APP_NAME=java-play \
     TERM=xterm
 
 # Install related packages
-RUN add-apt-repository ppa:openjdk-r/ppa && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends software-properties-common && \
+    add-apt-repository ppa:openjdk-r/ppa && \
     apt-get update && \
-    apt-get install -y --no-install-recommends software-properties-common openjdk-8-jdk && \
+    apt-get install -y --no-install-recommends openjdk-8-jdk && \
     apt-get clean && \
     rm -rf /var/lib/apt /var/cache/apt/archives/* /tmp/*
 
